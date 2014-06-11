@@ -31,7 +31,7 @@
 	position: absolute;
 	top: 0;
 	width: 90%;
-	z-index: 2;
+	z-index: 999;
 }
 
 .widget {
@@ -51,7 +51,7 @@
 	-moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
-    z-index: 3;
+    z-index: 999;
     .widget.socialicons {
     	margin: 2.5em 0;
     	text-align: center;
@@ -127,6 +127,10 @@
 			box-shadow: 0 6px 0 white, 0 12px 0 white;
 		}
 	}
+	.bk-overlay {
+		right: 400px!important;
+		top: -30px!important;
+	}
 }
 
 .widget .extendednavigation ul li, .widget.extendednavigation ul li { 
@@ -154,10 +158,6 @@ body #main {
 
 body.menu-active .bk-nav { 
 	right: 0; 
-}
-.bk-overlay #page-zones__template-widgets__extendednavigation-navigationheader-bk-overlay {
-	right: 400px;
-	top: -30px;
 }
 
 /* Feature */
