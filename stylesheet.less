@@ -73,6 +73,9 @@
         padding: 0;
         list-style: none;
         opacity: 0.5;
+        @media @tablet {
+        	display: block!important;
+        }
         li {
             color: #dfe5eb;
             display: block;
@@ -165,6 +168,7 @@ body.menu-active .bk-nav {
 .widget.feature .feature-bgimg .content {
 	background-color: fade(black, 40%);
 	padding: 0 40px;
+	height: 100%;
 	text-align: center;
 	h3 {
 
@@ -174,7 +178,6 @@ body.menu-active .bk-nav {
 		background: transparent;
 		border-radius: 8px;
 		padding: 10px 25px;
-		height: 100%;
 		&:hover {
 			background-color: white;
 			color: black;
