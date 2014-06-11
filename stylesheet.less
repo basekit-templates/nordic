@@ -1,0 +1,224 @@
+/* 
+
+1. Imports & Includes
+2. Mixins
+3. 
+4. 
+5.
+
+*/
+
+/* Imports & Includes */
+
+@import "@{templateCommon}/basekit-bootstrap.less";
+@tablet: ~"only screen and (max-width: 860px)";
+@mobile: ~"only screen and (max-width: 650px)";
+
+/* Mixins */
+
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+
+/* Header & Navigation */
+
+.bk-header {
+	margin-right: 10%;
+	padding: 30px 0;
+	position: absolute;
+	top: 0;
+	width: 90%;
+	z-index: 1;
+}
+
+.widget {
+	&.logo, &.companyname {
+		display: inline-block;
+	}
+}
+
+.bk-nav {
+	background: lighten(black, 10%);
+	border-left: 1px solid black;
+	padding: 30px 15px;
+	height: 100%;
+	position: fixed;
+	right: -320px;
+	width: 320px;
+	-moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    .widget.socialicons {
+    	margin: 2.5em 0;
+    	text-align: center;
+    	span a {
+    		background-color: rgba(255,255,255, 0.2);
+    		&:hover {
+				background-color: rgba(255,255,255, 0.3);
+    		}
+    	}
+    }
+}
+
+.widget.extendednavigation {
+	display: table;
+	width: 100%;
+    > ul {
+        display: block;
+        margin: 40px;
+        padding: 0;
+        list-style: none;
+        opacity: 0.5;
+        li {
+            color: #dfe5eb;
+            display: block
+            padding: 10px 0;
+            cursor: pointer;
+            &:hover { 
+            	color: #59e9df; 
+            }
+        }
+        li:before {
+            display: inline-block;
+            text-decoration: inherit;
+            width: 1em;
+            color: #59e9df;
+            margin-right: 12px;
+            text-align: center;
+            font-variant: normal;
+            font-size: 0.75em;
+            text-transform: none;
+            line-height: 1em;
+        }
+    }
+	a.pull {
+		border: 1px solid fade(white, 20%);
+		border-radius: 6px;
+		padding: 11px 9px 0;
+		position: absolute;
+		right: 335px;
+		top: 0; 
+		display: inline-block;
+		width: 42px;
+		height: 38px;
+		text-indent: -900em;
+		overflow: hidden;
+		cursor: pointer;
+		outline: none;
+		-moz-transition: all .5s;
+	    -webkit-transition: all .5s;
+	    transition: all .5s;
+	    &:hover {
+	    	background-color: fade(black, 15%);
+	    	-moz-transition: all .5s;
+		    -webkit-transition: all .5s;
+		    transition: all .5s;
+	    }
+		&:after {
+			content: '';
+			position: absolute;
+			width: 22px;
+			height: 2px;
+			background: white;
+			box-shadow: 0 6px 0 white, 0 12px 0 white;
+		}
+	}
+}
+
+.widget .extendednavigation ul li, .widget.extendednavigation ul li { 
+	display: block; 
+}
+
+body.menu-active .widget.extendednavigation#slide-menu { 
+	right: 0px; 
+}
+
+body.menu-active #main { 
+	right: 320px; 
+	-moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s; 
+    -webkit-backface-visibility: hidden;
+}
+
+body #main {
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	-webkit-backface-visibility: hidden;
+}
+
+body.menu-active .bk-nav { 
+	right: 0; 
+}
+
+/* Feature */
+
+.widget.feature .feature-bgimg .content {
+	background-color: fade(black, 40%);
+	padding: 0 40px;
+	text-align: center;
+	h3 {
+
+	}
+	button {
+		border: 2px solid fade(white, 35%);
+		background: transparent;
+		border-radius: 8px;
+		padding: 10px 25px;
+		&:hover {
+			background-color: white;
+			color: black;
+			transition: all .75s ease;
+		}
+		span {
+			vertical-align: text-bottom;
+		}
+	}
+}
+
+.feature-img, .widget.feature {
+	width: 100%;
+	height: 100%;
+}
+
+/* Main Content */
+
+.contain {
+	padding: 40px;
+}
+
+#main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background: #fcfeff;
+    border-radius: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+/* Form */
+
+input, textarea {
+	background-color: rgba(0,0,0, 0.02);
+	border: 2px solid rgba(0,0,0, 0.04);
+	&:hover {
+		border: 2px solid rgba(0,0,0, 0.2);
+		transition: ease .5s border;
+	}
+}
+
+/* Ecom Product List */
+
+.ecom-featuredproducts-header h2 {
+	
+}

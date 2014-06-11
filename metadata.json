@@ -1,0 +1,148 @@
+{
+    "name":"Nordic",
+    "thumbnail":"lahti.png",
+    "screenshot":"lahti.png",
+    "templateType":"standard",
+    "pageTypes": ["home"],
+    "tags": {
+    "en": ["clean", "menu", "ecommerce", "shop"],
+    "es": ["limpio", "menú", "ecommerce", "tienda"],
+    "br": ["limpo", "menu", "ecommerce", "loja"]
+    },
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#eeeeee",
+            "color3":"#f9be4c",
+            "color4":"#0c0c0c",
+            "color5":"#969696",
+            "color6":"#473d3a",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#0c0c0c",
+            "color3":"#4682b4",
+            "color4":"#0c0c0c",
+            "color5":"#303030",
+            "color6":"#323232",
+            "color7":"#f0f0f0"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#0c0c0c",
+            "color3":"#f4a460",
+            "color4":"#0c0c0c",
+            "color5":"#303030",
+            "color6":"#323232",
+            "color7":"#f0f0f0"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#0c0c0c",
+            "color3":"#5f9ea0",
+            "color4":"#0c0c0c",
+            "color5":"#303030",
+            "color6":"#323232",
+            "color7":"#f0f0f0"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#0c0c0c",
+            "color3":"#8fbc8f",
+            "color4":"#0c0c0c",
+            "color5":"#303030",
+            "color6":"#0f2425",
+            "color7":"#f0f0f0"
+        }
+    },
+    "fontSwatch": {
+       "title": "Lato",
+        "font1": {
+            "font-family": "\"Abril Fatface\", \"Palatino Linotype\", serif",
+            "font-size": "60px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "24px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "darken(@color-swatch4,10%)",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "19px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "fade(@color-swatch1, 65%)",
+            "color-hover": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "transparent",
+            "background-color-hover": "transparent"
+        },
+        "font7": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch1",
+            "letter-spacing": "0",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "lighten(@color-swatch3,8%)"
+        },
+        "font8": {
+            "font-family": "\"Abril Fatface\", \"Palatino Linotype\", serif",
+            "font-size": "60px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "34px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Abel\", \"Lucida Console\", monospace",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        }
+    }
+}
