@@ -14,11 +14,11 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#eeeeee",
-            "color3":"#f9be4c",
+            "color3":"#e1af36",
             "color4":"#0c0c0c",
-            "color5":"#969696",
-            "color6":"#473d3a",
-            "color7":"#ffffff"
+            "color5":"#323232",
+            "color6":"#202020",
+            "color7":"#ebebeb"
         },
         "Swatch 2": {
             "color1":"#ffffff",
@@ -63,7 +63,7 @@
             "font-family": "\"Abril Fatface\", \"Palatino Linotype\", serif",
             "font-size": "60px",
             "font-weight": "400",
-            "line-height": "30px",
+            "line-height": "64px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -77,9 +77,9 @@
         },
         "font3": {
             "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
-            "font-size": "24px",
+            "font-size": "21px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "30px",
             "color": "darken(@color-swatch4,10%)",
             "letter-spacing": "inherit"
         },

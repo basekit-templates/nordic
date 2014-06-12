@@ -11,11 +11,11 @@
 	<div class="feature-img" id="feature-img">
 		{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
 	</div>
+	<header class="bk-header">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+		{{widget('companyname', 'companyname', {"business": "NORDIC"})|raw}}
+	</header>
 	<div class="contain" id="contain">
-		<header class="bk-header">
-			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
-    		{{widget('companyname', 'companyname', {"business": "NORDIC"})|raw}}
-		</header>
 			{{zone('main')|raw}}
 	</div><!--end contain-->
 </div><!--end main-->
