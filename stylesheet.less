@@ -27,7 +27,7 @@
 
 .bk-header {
 	margin-right: 10%;
-	padding: 30px 0;
+	padding: 30px 0 30px 30px;
 	position: absolute;
 	top: 0;
 	width: 90%;
@@ -55,9 +55,25 @@
     -webkit-transition: all .5s;
     transition: all .5s;
     z-index: 9999;
+	@media only screen and (max-height: 450px) {
+		position: absolute;
+		height: auto;
+	}
+    &:after {
+    	@media only screen and (max-height: 450px) {
+    		background: @color-swatch6;
+			border-left: 1px solid black;
+			content: "";
+			display: block;
+			height: 100%;
+			right: 0;
+			width: 320px;
+			position: absolute;
+    	}
+    }
     @media @mobile {
-    	right: -280px ;
-    	width: 280px;
+    	right: -250px ;
+    	width: 250px;
     }
     .widget.socialicons {
     	margin: 2.5em 0;
@@ -103,8 +119,6 @@
             	ul {
             		background: transparent;
             		position: relative;
-            		top: 10px;
-            		transition: all .5s;
             		li {
             			padding: 8px 6px;
             		}
@@ -156,7 +170,7 @@
 	    -webkit-transition: all .5s;
 	    transition: all .5s;
 	    @media @mobile {
-	    	right: 290px;
+	    	right: 250px;
 	    }
 	    &:hover {
 	    	background-color: fade(@color-swatch6, 25%);
@@ -190,6 +204,10 @@ div.widget .extendednavigation ul, div.widget.extendednavigation ul {
 	}
 }
 
+div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
+	display: block!important;
+}
+
 body.menu-active .widget.extendednavigation#slide-menu { 
 	right: 0px; 
 }
@@ -201,7 +219,7 @@ body.menu-active #main {
     transition: all .5s; 
     -webkit-backface-visibility: hidden;
     @media @mobile {
-    	right: 280px;
+    	right: 250px;
     }
 }
 
@@ -223,6 +241,15 @@ body.menu-active .bk-nav {
 	padding: 0 40px;
 	height: 100%;
 	text-align: center;
+	@media @mobile {
+		padding: 0 20px;
+	}
+	.spare {
+		@media only screen and (max-height: 450px) {
+			position: relative;
+			top: 60px;
+		}
+	}
 	h2 {
 		font-family: @font-swatch1-font-family;
 		font-size: @font-swatch1-font-size;
@@ -230,8 +257,12 @@ body.menu-active .bk-nav {
 		line-height: @font-swatch1-line-height;
 		padding-bottom: 12px;
 		@media @mobile {
-			font-size: bkscale(@font-swatch1-font-size, 0.85);
-			line-height: bkscale(@font-swatch1-line-height, 0.9);
+			font-size: bkscale(@font-swatch1-font-size, 0.75);
+			line-height: bkscale(@font-swatch1-line-height, 0.8);
+		}
+		@media only screen and (max-height: 420px) {
+			font-size: bkscale(@font-swatch1-font-size, 0.7);
+			line-height: bkscale(@font-swatch1-line-height, 0.75);
 		}
 	}
 	h3 {
@@ -272,6 +303,9 @@ body.menu-active .bk-nav {
 	padding: 40px;
 	margin: 0 auto;
 	max-width: 1600px;
+	@media @mobile {
+		padding: 20px;
+	}
 }
 
 #main {
@@ -386,7 +420,7 @@ input, textarea {
 }
 
 .blog-post-list .blog-post-feature-image-wrap {
-    height: 2750px;
+    height: 275px;
 }
 
 .blogpost .blog-post-feature-image-wrap {
