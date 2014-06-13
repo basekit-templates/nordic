@@ -2,19 +2,25 @@
 
 1. Imports & Includes
 2. Mixins
-3. 
-4. 
-5.
+3. Header & Navigation
+4. Feature
+5. Main
+6. Footer
+7. Blog
+8. Menu
+9. Ecommerce
+10. Forms
+11. Misc Elements (Social, Typography etc.)
 
 */
 
-/* Imports & Includes */
+/* 1. Imports & Includes */
 
 @import "@{templateCommon}/basekit-bootstrap.less";
 @tablet: ~"only screen and (max-width: 860px)";
 @mobile: ~"only screen and (max-width: 650px)";
 
-/* Mixins */
+/* 2. Mixins */
 
 .transition (@transition) {
 	-webkit-transition: @transition;  
@@ -23,8 +29,7 @@
 	-o-transition:      @transition;  
 }
 
-/* Header & Navigation */
-
+/* 3. Header & Navigation */
 
 .bk-pt-home {
 	.bk-header {
@@ -65,6 +70,13 @@
 		vertical-align: text-bottom;
 		img {
 			vertical-align: top;
+		}
+	}
+	&.companyname {
+		a {
+			@media @mobile {
+				font-size: bkscale(@font-swatch10-font-size, 0.96);
+			}
 		}
 	}
 }
@@ -250,7 +262,7 @@ body.menu-active .bk-nav {
 	right: 0; 
 }
 
-/* Feature */
+/* 3. Feature */
 
 .widget.feature .feature-bgimg .content {
 	background-color: fade(black, 40%);
@@ -273,8 +285,8 @@ body.menu-active .bk-nav {
 		line-height: @font-swatch1-line-height;
 		padding-bottom: 12px;
 		@media @mobile {
-			font-size: bkscale(@font-swatch1-font-size, 0.75);
-			line-height: bkscale(@font-swatch1-line-height, 0.8);
+			font-size: bkscale(@font-swatch1-font-size, 0.72);
+			line-height: bkscale(@font-swatch1-line-height, 0.78);
 		}
 		@media only screen and (max-height: 420px) {
 			font-size: bkscale(@font-swatch1-font-size, 0.7);
@@ -313,7 +325,7 @@ body.menu-active .bk-nav {
 	height: 100%;
 }
 
-/* Main Content */
+/* 5. Main */
 
 .contain {
 	padding: 40px;
@@ -339,7 +351,7 @@ body.menu-active .bk-nav {
     box-sizing: border-box;
 }
 
-/* Footer */
+/* 6. Footer */
 
 .bk-footer {
 	.copyright {
@@ -357,83 +369,7 @@ body.menu-active .bk-nav {
 	}
 }
 
-/* Form */
-
-input, textarea {
-	background-color: rgba(0,0,0, 0.02);
-	border: 2px solid rgba(0,0,0, 0.04);
-	&:hover {
-		border: 2px solid rgba(0,0,0, 0.2);
-		transition: ease .5s border;
-	}
-}
-
-.widget {
-    &.contactform {
-        input, textarea {
-            border: 1px solid fade(@color-swatch5, 25%);
-            &.email {
-                @media @mobile {
-                    width: 70%;
-                }
-            }
-        }
-    }
-    &.profile {
-        form {
-            button {
-                position: relative;
-                top: 1px;
-            }
-            fieldset input {
-                border: 1px solid fade(@color-swatch5, 25%);
-            }
-        }
-    }
-    &.signupform fieldset {
-        button {
-            height: 45px;
-            width: 65px;
-            position: relative;
-        }
-        input {
-            border: 1px solid fade(@color-swatch5, 25%);
-            width: 50%;
-            @media @tablet {
-                width: 65%;
-            }
-            @media @mobile {
-                width: 70%;
-            }
-        }
-    }
-    &.blogsearch {
-        margin: 10px 0;
-        input {
-            border: 1px solid fade(@color-swatch5, 25%);
-            height: 45px;
-            @media @mobile {
-                width: 100%;
-            }
-        }
-        button {
-            background-color: @font-swatch7-background-color;
-            border: 0;
-            font-family: @font-swatch7-font-family;
-            font-size: @font-swatch7-font-size;
-            font-weight: @font-swatch7-font-weight;
-            color: @font-swatch7-color;
-            letter-spacing: inherit;
-            padding: 5px 10px;
-            margin: 1em 0;
-            text-decoration: none;
-            height: 45px;
-            position: relative;
-        }
-    }
-}
-
-/* Blog */
+/* 7. Blog */
 
 .blogpost, .blog-post-list {
     .blog-post-feature-image-wrap {
@@ -473,7 +409,7 @@ input, textarea {
     }
 }
 
-/* Menu */
+/* 8. Menu */
 
 .widget {
     &.menusections {
@@ -570,7 +506,7 @@ input, textarea {
     }
 }
 
-/* Ecom Product List */
+/* 9. Ecommerce */
 
 .widget.ecomproductslist {
 	.productlist-display-form {
@@ -582,6 +518,10 @@ input, textarea {
 				content: ":";
 				display: inline-block;
 				position: relative;
+			}
+			button {
+				position: relative;
+				left: -9px;
 			}
 		}
 	}
@@ -676,6 +616,93 @@ input, textarea {
 
 .ecom-featuredproducts-header h2 {
 	padding-bottom: 25px;
+}
+
+
+/* 10. Forms */
+
+input, textarea {
+	background-color: rgba(0,0,0, 0.02);
+	border: 2px solid rgba(0,0,0, 0.04);
+	&:hover {
+		border: 2px solid rgba(0,0,0, 0.2);
+		transition: ease .5s border;
+	}
+}
+
+.widget {
+    &.contactform {
+        input, textarea {
+            border: 1px solid fade(@color-swatch5, 25%);
+            &.email {
+                @media @mobile {
+                    width: 70%;
+                }
+            }
+        }
+    }
+    &.profile {
+        form {
+            button {
+                position: relative;
+                left: -4px;
+                top: 1px;
+            }
+            fieldset input {
+                border: 1px solid fade(@color-swatch5, 25%);
+            }
+        }
+    }
+    &.signupform fieldset {
+        button {
+            height: 45px;
+            width: 65px;
+            position: relative;
+        }
+        input {
+            border: 1px solid fade(@color-swatch5, 25%);
+            width: 50%;
+            @media @tablet {
+                width: 65%;
+            }
+            @media @mobile {
+                width: 70%;
+            }
+        }
+    }
+    &.blogsearch {
+        margin: 10px 0;
+        input {
+            border: 1px solid fade(@color-swatch5, 25%);
+            height: 45px;
+            @media @mobile {
+                width: 100%;
+            }
+        }
+        button {
+            background-color: @font-swatch7-background-color;
+            border: 0;
+            font-family: @font-swatch7-font-family;
+            font-size: @font-swatch7-font-size;
+            font-weight: @font-swatch7-font-weight;
+            color: @font-swatch7-color;
+            letter-spacing: inherit;
+            padding: 5px 10px;
+            margin: 1em 0;
+            text-decoration: none;
+            height: 45px;
+            position: relative;
+        }
+    }
+}
+
+/* 11. Misc Elements */
+
+h5 {
+	font-family: @font-swatch1-font-family;
+	font-size: @font-swatch2-font-size;
+	font-weight: @font-swatch2-font-weight;
+	line-height: @font-swatch2-line-height;
 }
 
 hr.line {
