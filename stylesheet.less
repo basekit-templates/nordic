@@ -25,21 +25,47 @@
 
 /* Header & Navigation */
 
+
+.bk-pt-home {
+	.bk-header {
+		background: transparent;
+		margin-right: 10%;
+		padding: 30px 0 30px 30px;
+		position: absolute;
+		top: 0;
+		width: 90%;
+		z-index: 9999;
+		@media @mobile {
+			width: 70%;
+		}
+	}
+	#main {
+		padding-top: 0;
+	}
+}
+
 .bk-header {
-	margin-right: 10%;
-	padding: 30px 0 30px 30px;
-	position: absolute;
+	background: lighten(@color-swatch6, 5%);
+	padding: 30px;
+	position: fixed;
 	top: 0;
-	width: 90%;
+	width: 100%;
 	z-index: 9999;
 	@media @mobile {
-		width: 70%;
+		padding: 20px 30px;
 	}
 }
 
 .widget {
 	&.logo, &.companyname {
 		display: inline-block;
+	}
+	&.logo {
+		margin-right: 2px;
+		vertical-align: text-bottom;
+		img {
+			vertical-align: top;
+		}
 	}
 }
 
@@ -72,18 +98,8 @@
     	}
     }
     @media @mobile {
-    	right: -250px ;
+    	right: -250px;
     	width: 250px;
-    }
-    .widget.socialicons {
-    	margin: 2.5em 0;
-    	text-align: center;
-    	span a {
-    		background-color: rgba(255,255,255, 0.2);
-    		&:hover {
-				background-color: rgba(255,255,255, 0.3);
-    		}
-    	}
     }
 }
 
@@ -309,6 +325,7 @@ body.menu-active .bk-nav {
 }
 
 #main {
+	padding-top: 100px;
     position: fixed;
     top: 0;
     right: 0;
@@ -320,6 +337,24 @@ body.menu-active .bk-nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+/* Footer */
+
+.bk-footer {
+	.copyright {
+		.contain {
+			border-top: 1px solid lighten(@color-swatch5, 68%);
+			padding: 12px 40px;
+		}
+		.widget.profile {
+			display: block;
+			width: 100%;
+			color: @font-swatch5-color;
+			padding: 30px 0;
+			text-align: center;
+		}
+	}
 }
 
 /* Form */
@@ -358,7 +393,7 @@ input, textarea {
     &.signupform fieldset {
         button {
             height: 45px;
-            top: 2px;
+            width: 65px;
             position: relative;
         }
         input {
@@ -645,4 +680,67 @@ input, textarea {
 
 hr.line {
 	background-color: lighten(@color-swatch5, 75%)
+}
+
+.widget.socialicons, .widget.profile .bk-profile-socialicons {
+	margin: 2em 0 1em;
+	text-align: center;
+    span a {
+		background-color: transparent;
+		background-size: 26px;
+		&:hover{
+			background-color: transparent;
+		}
+	}
+}
+
+.svg {
+	.bk-socialicons-linkedin {
+		a {
+			background-image: image('/images/social/socialicons-linkedin.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-linkedin-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-twitter {
+		a {
+			background-image: image('/images/social/socialicons-twitter.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-twitter-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-facebook {
+		a {
+			background-image: image('/images/social/socialicons-facebook.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-facebook-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-rss {
+		a {
+			background-image: image('/images/social/socialicons-rss.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-rss-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-googleplus {
+		a {
+			background-image: image('/images/social/socialicons-googleplus.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-googleplus-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-youtube {
+		a {
+			background-image: image('/images/social/socialicons-youtube.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-youtube-hover.svg');
+			}
+		}
+	}
 }

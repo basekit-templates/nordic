@@ -2,23 +2,21 @@
 
 {% block content %}
 
-<nav class="bk-nav" id="nav">
-	{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
-	{{widget('socialicons', 'social', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
-</nav>
+<div class="bk-pt-default">
 
-<div role="main" id="main">
-	<div class="feature-img" id="feature-img">
-		{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
-	</div>
-	<div class="contain" id="contain">
+	<nav class="bk-nav" id="nav">
+		{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+		{{widget('socialicons', 'social', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+	</nav>
+
+	<div role="main" id="main">
 		<header class="bk-header">
-			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
-    		{{widget('companyname', 'companyname', {"business": "NORDIC"})|raw}}
+			{{widget('logo', 'logo', {"defaultlogo": asset('images/nordic-logo.png'),"showTplWidget":"0"})|raw}}
+			{{widget('companyname', 'companyname', {"business": "NORDIC"})|raw}}
 		</header>
-			{{zone('main')|raw}}
-	</div><!--end contain-->
-</div><!--end main-->
+		<div class="contain" id="contain">
+				{{zone('main')|raw}}
+		</div><!--end contain-->
 
 {% include 'includes/footer.twig' %}
 

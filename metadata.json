@@ -101,7 +101,7 @@
         },
         "font6": {
             "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
-            "font-size": "19px",
+            "font-size": "18px",
             "font-weight": "400",
             "line-height": "26px",
             "color": "fade(@color-swatch1, 65%)",
