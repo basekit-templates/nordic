@@ -83,8 +83,7 @@
 
 .bk-nav {
 	background: @color-swatch6;
-	border-left: 1px solid black;
-	padding: 30px 15px;
+	border-left: 1px solid darken(@color-swatch6, 50%);
 	height: 100%;
 	position: fixed;
 	right: -320px;
@@ -93,11 +92,14 @@
     -webkit-transition: all .5s;
     transition: all .5s;
     z-index: 9999;
+    .widget.socialicons {
+    	border-left: 1px solid darken(@color-swatch6, 50%);
+    }
 	@media only screen and (max-height: 450px) {
 		position: absolute;
 		height: auto;
 	}
-    &:after {
+    /*&:after {
     	@media only screen and (max-height: 450px) {
     		background: @color-swatch6;
 			border-left: 1px solid black;
@@ -108,7 +110,7 @@
 			width: 320px;
 			position: absolute;
     	}
-    }
+    }*/
     @media @mobile {
     	right: -250px;
     	width: 250px;
@@ -116,7 +118,10 @@
 }
 
 .widget.extendednavigation {
+	background: @color-swatch6;
+	border-left: 1px solid darken(@color-swatch6, 50%);
 	display: table;
+	padding: 30px 15px;
 	width: 100%;
     ul {
         display: block;
@@ -185,8 +190,8 @@
 		border-radius: 6px;
 		padding: 11px 9px 0;
 		position: absolute;
-		right: 335px;
-		top: 0; 
+		right: 345px;
+		top: 30px; 
 		display: inline-block;
 		width: 42px;
 		height: 38px;
@@ -259,6 +264,7 @@ body #main {
 }
 
 body.menu-active .bk-nav { 
+	position: absolute;
 	right: 0; 
 }
 
