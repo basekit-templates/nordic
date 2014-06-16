@@ -53,6 +53,7 @@
 	background: lighten(@color-swatch6, 5%);
 	padding: 30px;
 	position: fixed;
+	right: 0;
 	top: 0;
 	width: 100%;
 	z-index: 9999;
@@ -94,6 +95,8 @@
     z-index: 9999;
     .widget.socialicons {
     	border-left: 1px solid darken(@color-swatch6, 50%);
+    	padding: 30px 15px;
+    	margin: 0;
     }
 	@media only screen and (max-height: 450px) {
 		position: absolute;
@@ -203,7 +206,7 @@
 	    -webkit-transition: all .5s;
 	    transition: all .5s;
 	    @media @mobile {
-	    	right: 250px;
+	    	right: 270px;
 	    }
 	    &:hover {
 	    	background-color: fade(@color-swatch6, 25%);
@@ -245,7 +248,7 @@ body.menu-active .widget.extendednavigation#slide-menu {
 	right: 0px; 
 }
 
-body.menu-active #main { 
+body.menu-active #main, body.menu-active .bk-header { 
 	right: 320px; 
 	-moz-transition: all .5s;
     -webkit-transition: all .5s;
@@ -256,7 +259,7 @@ body.menu-active #main {
     }
 }
 
-body #main {
+body #main, body .bk-header {
 	-moz-transition: all .5s;
 	-webkit-transition: all .5s;
 	transition: all .5s;
@@ -281,7 +284,20 @@ body.menu-active .bk-nav {
 	.spare {
 		@media only screen and (max-height: 450px) {
 			position: relative;
-			top: 60px;
+			top: 30px;
+			h2 {
+				font-size: bkscale(@font-swatch1-font-size, 0.62);
+				line-height: bkscale(@font-swatch1-line-height, 0.68);
+				padding-bottom: 8px;
+			}
+			h3 {
+				font-size: bkscale(@font-swatch5-font-size, 0.95);
+				line-height: bkscale(@font-swatch5-line-height, 1.05);
+			}
+			button {
+				padding: 8px 15px;
+				margin-top: 12px;
+			}
 		}
 	}
 	h2 {
