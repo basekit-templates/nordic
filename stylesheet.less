@@ -158,13 +158,15 @@
             &:hover { 
             	.transition( all, 0.5s, ease);
             	ul {
-            		background: transparent;
+            		background: darken(@color-swatch6, 3%);
             		position: relative;
+            		margin-left: 20px;
+            		width: 90%;
             		li {
-            			padding: 8px 6px;
+            			padding: 14px 6px;
             		}
             		.text {
-            			font-size: bkscale(@font-swatch6-font-size, 0.95);
+            			font-size: bkscale(@font-swatch6-font-size, 0.92);
             		}
             	}
             }
@@ -210,6 +212,7 @@
 		.transition( all, 0.5s, ease);
 	    @media @mobile {
 	    	right: 270px;
+	    	top: 22px;
 	    }
 	    &:hover {
 	    	background-color: fade(@color-swatch6, 25%);
@@ -356,7 +359,6 @@ body.menu-active .bk-nav {
 }
 
 #main {
-	padding-top: 100px;
     position: fixed;
     top: 0;
     right: 0;
@@ -368,6 +370,7 @@ body.menu-active .bk-nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    padding-top: 100px;
 }
 
 /* 6. Footer */
@@ -722,6 +725,139 @@ h5 {
 
 hr.line {
 	background-color: lighten(@color-swatch5, 75%)
+}
+
+.widget.gallery ul li span.inner .title {
+	bottom: -50px;
+	opacity: 0;
+}
+
+.widget.gallery ul li span.inner a:hover .title {
+	bottom: 0;
+	opacity: 1;
+}
+
+.widget {
+	&.responsiveslideshow {
+		background-color: gainsboro;
+		margin-top: 20px;
+		.slideshow-widget-wrapper {
+		}
+		.slideshow-widget-controls {
+			.dot {
+				background-color: fade(@color-swatch1, 65%);
+				.border-radius(100px);
+				&.selected {
+					background-color: @color-swatch3;
+				}
+			}
+		}
+		.content-wrapper {
+			background-color: fade(@color-swatch1, 75%);
+			bottom: 15px;
+			display: inline-block;
+			min-height: 50px;
+			height: auto;
+			max-width: 65%;
+			left: 15px;
+			right: auto;
+			max-width: 80%;
+			@media @mobile {
+				display: block;
+				bottom: initial;
+				height: initial;
+				top: 0;
+			}
+			span {
+				color: @color-swatch5;
+				padding: 20px 4px 0 10px; 
+				@media @mobile {
+					padding-right: 10px;
+				}
+				&:last-child {
+					padding-right: 10px;
+				}
+				&.title {
+					font-weight: @font-swatch2-font-weight;
+				}
+			}
+		}
+		.slideshow-widget {
+			.btn-play {
+				background-color: fade(@color-swatch1, 65%);
+				.border-radius(100px);
+				height: 75px;
+				width: 75px;
+				left: 46.5%;
+				@media @tablet {
+					left: 44.5%;
+				}
+				@media @mobile {
+					left: 43.5%;
+				}
+				&:hover {
+					background-color: fade(@color-swatch1, 85%);
+					transition: all .5s ease;
+				}
+				&:after {
+					font-size: 28px;
+				}
+				&.pause:after {
+					left: 3px;
+					line-height: 80px;
+				}
+			}
+			.btn-prev, .btn-next {
+				background-color: fade(@color-swatch1, 65%);
+				bottom: 15px;
+				font-family: @font-swatch7-font-family;
+				font-size: bkscale(@font-swatch3-font-size, 1.4);
+				font-weight: @font-swatch5-font-weight;
+				height: 50px;
+				width: 55px;
+				top: inherit;
+				text-indent: 1000px;
+				overflow: hidden;
+				.transition(all .5s ease);
+				&:hover {
+					background-color: fade(@color-swatch1, 85%);
+					.transition(all .5s ease);
+				}
+				&:before {
+					display: block;
+					position: absolute;
+					top: 10px;
+					left: 20px;
+					width: 0;
+					height: 0;
+					text-indent: 0;
+				}
+			}
+			.btn-prev {
+				left: inherit;
+				right: 80px;
+				&:before {
+					content: "\003c";
+				}
+				@media @mobile {
+					left: 15px;
+					right: inherit;
+				}
+			}
+			.btn-next {
+				right: 15px;
+				&:before {
+					content: "\003e";
+				}
+				@media @mobile {
+					left: 80px;
+					right: inherit;
+				}
+			}
+		}
+		.slideshow-image-list {
+		}
+	}
 }
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons {
