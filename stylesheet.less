@@ -158,15 +158,28 @@
             &:hover { 
             	.transition( all, 0.5s, ease);
             	ul {
-            		background: darken(@color-swatch6, 3%);
+            		/*background: darken(@color-swatch6, 3%);*/
+            		background: transparent;
+            		border-bottom: 2px solid fade(@color-swatch1, 10%);
+            		border-top: 2px solid fade(@color-swatch1, 10%);
             		position: relative;
             		margin-left: 20px;
+            		margin-top: 8px;
             		width: 90%;
             		li {
-            			padding: 14px 6px;
+            			padding: 12px 6px;
+            			&:first-child {
+            				padding-top: 20px;
+            			}
+            			&:last-child {
+            				padding-bottom: 20px;
+            			}
+            			a {
+            				padding-left: 15px;
+            			}
             		}
             		.text {
-            			font-size: bkscale(@font-swatch6-font-size, 0.92);
+            			font-size: bkscale(@font-swatch6-font-size, 0.90);
             		}
             	}
             }
@@ -634,29 +647,78 @@ body.menu-active .bk-nav {
 
 .ecom-featuredproducts-header h2 {
 	padding-bottom: 25px;
+	padding-top: 15px;
 }
 
 
 /* 10. Forms */
 
 input, textarea {
-	background-color: rgba(0,0,0, 0.02);
-	border: 2px solid rgba(0,0,0, 0.04);
-	&:hover {
-		border: 2px solid rgba(0,0,0, 0.2);
-		.transition( border, 0.5s, ease);
+	background-color: @color-swatch7;
+	border: 1px solid darken(@color-swatch7, 2%);
+	text-indent: 8px;
+	&:hover, &:focus {
+		border: 1px solid darken(@color-swatch7, 10%)!important;
+		transition: ease .5s border!important;
 	}
+}
+
+input {
+	@media @mobile {
+		width: 65%;
+	}
+}
+
+button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover {
+	.transition(all, 0.5s, ease);
+}
+
+input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, button {
+	.border-radius(4px);
+	line-height: 25px;
+	height: 50px;
+}
+
+input.blog-search-input, .widget.signupform input, .widget.profile form fieldset input {
+	.border-radius (@radius: 4px 0 0 4px);
+	margin-right: 0;
+}
+
+button.blog-search-submit-button, .widget.signupform button, .widget.profile button {
+	.border-radius (@radius: 0 4px 4px 0);
+}
+
+.widget.paypalbuynow .widget.button.paypal:hover {
+	.border-radius(4px);
+	border: none!important;
+	.transition(all, 0.5s, ease);
+}
+
+textarea {
+	.border-radius (@radius: 4px);
+	padding-top: 10px;
+	imn-height: 120px;
 }
 
 .widget {
     &.contactform {
+    	label {
+    		font-family: @font-swatch3-font-family;
+    		font-size: @font-swatch4-font-size;
+    		font-weight: @font-swatch3-font-weight;
+    		line-height: @font-swatch4-line-height;
+    		margin: 16px 0 8px;
+    	}
         input, textarea {
-            border: 1px solid fade(@color-swatch5, 25%);
+            border: 1px solid darken(@color-swatch7, 2%);
             &.email {
                 @media @mobile {
                     width: 70%;
                 }
             }
+        }
+        button.btn {
+        	margin-top: 10px;
         }
     }
     &.profile {
@@ -664,21 +726,25 @@ input, textarea {
             button {
                 position: relative;
                 left: -4px;
-                top: 1px;
+                top: 2px;
             }
             fieldset input {
-                border: 1px solid fade(@color-swatch5, 25%);
+                border: 1px solid darken(@color-swatch7, 2%);
+                @media @mobile {
+                	width: 65%;
+                }
             }
         }
     }
     &.signupform fieldset {
         button {
-            height: 45px;
-            width: 65px;
+            width: 85px;
             position: relative;
+            top: 1px;
         }
         input {
-            border: 1px solid fade(@color-swatch5, 25%);
+            border: 1px solid darken(@color-swatch7, 2%);
+            height: 50px;
             width: 50%;
             @media @tablet {
                 width: 65%;
@@ -690,12 +756,12 @@ input, textarea {
     }
     &.blogsearch {
         margin: 10px 0;
+        label {
+        	display: block;
+        }
         input {
-            border: 1px solid fade(@color-swatch5, 25%);
-            height: 45px;
-            @media @mobile {
-                width: 100%;
-            }
+            border: 1px solid darken(@color-swatch7, 2%);
+            width: 65%;
         }
         button {
             background-color: @font-swatch7-background-color;
@@ -708,9 +774,17 @@ input, textarea {
             padding: 5px 10px;
             margin: 1em 0;
             text-decoration: none;
-            height: 45px;
             position: relative;
+            width: 85px;
+            &:hover {
+            	background-color: @font-swatch7-background-color-hover;
+            }
         }
+    }
+    &.button {
+    	button.btn:hover {
+    		background-color: @font-swatch7-background-color-hover;
+    	}
     }
 }
 
