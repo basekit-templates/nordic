@@ -59,11 +59,7 @@
 .bk-header {
 	background: lighten(@color-swatch6, 5%);
 	padding: 30px;
-	position: fixed;
-	right: 0;
-	top: 0;
 	width: 100%;
-	z-index: 9999;
 	@media @mobile {
 		padding: 20px 30px;
 	}
@@ -677,6 +673,10 @@ input {
 		margin-left: -4px;
 		width: 25%;
 	}
+}
+
+.widget.tweet, .widget.button {
+	margin: 10px 0;
 }
 
 button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover {
