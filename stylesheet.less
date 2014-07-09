@@ -55,6 +55,11 @@
 	#main {
 		padding-top: 0;
 	}
+	.widget.extendednavigation a.pull {
+		@media @mobile {
+			top: 20px;
+		}
+	}
 }
 
 .bk-header {
@@ -62,7 +67,7 @@
 	padding: 30px;
 	width: 100%;
 	@media @mobile {
-		padding: 20px 30px;
+		padding: 25px 30px 15px;
 	}
 }
 
@@ -73,14 +78,35 @@
 	&.logo {
 		margin-right: 2px;
 		vertical-align: text-bottom;
+		@media @mobile {
+			vertical-align: top;
+		}
 		img {
 			vertical-align: top;
+			@media @mobile {
+				max-width: 80%;
+			}
+			@media only screen and (max-height: 450px) {
+				max-width: 80%;
+			}
 		}
 	}
 	&.companyname {
+		@media @mobile {
+			max-width: 80%;
+		}
 		a {
 			@media @mobile {
 				font-size: bkscale(@font-swatch10-font-size, 0.96);
+				line-height: bkscale(@font-swatch10-font-size, 0.94);
+				position: relative;
+				top: -4px;
+			}
+			@media only screen and (max-height: 450px) {
+				font-size: bkscale(@font-swatch10-font-size, 0.96);
+				line-height: bkscale(@font-swatch10-font-size, 0.94);
+				position: relative;
+				top: -4px;
 			}
 		}
 	}
@@ -222,7 +248,7 @@
 		.transition( all, 0.5s, ease);
 	    @media @mobile {
 	    	right: 270px;
-	    	top: 22px;
+	    	top: 16px;
 	    }
 	    &:hover {
 	    	background-color: fade(@color-swatch6, 25%);
@@ -401,6 +427,10 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 			text-align: center;
 		}
 	}
+}
+
+.bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a:hover {
+	background-color: transparent;
 }
 
 /* 7. Blog */
