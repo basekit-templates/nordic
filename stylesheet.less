@@ -261,11 +261,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-body.menu-active .widget.extendednavigation#slide-menu { 
+.menu-active .widget.extendednavigation#slide-menu { 
 	right: 0px; 
 }
 
-body.menu-active #main, body.menu-active .bk-header { 
+.menu-active #main, .menu-active .bk-header { 
 	right: 320px; 
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
@@ -274,12 +274,12 @@ body.menu-active #main, body.menu-active .bk-header {
     }
 }
 
-body #main, body .bk-header {
+#main, .bk-header {
 	.transition( all, 0.5s, ease);
 	-webkit-backface-visibility: hidden;
 }
 
-body.menu-active .bk-nav { 
+.menu-active .bk-nav { 
 	position: absolute;
 	right: 0; 
 }
@@ -556,7 +556,7 @@ body.menu-active .bk-nav {
 			}
 			button {
 				position: relative;
-				left: -9px;
+				top: 1px;
 			}
 		}
 	}
@@ -615,6 +615,9 @@ body.menu-active .bk-nav {
 	.checkout-pricepu {
 		color: lighten(@color-swatch5, 20%);
 	}
+	.checkout-order-button {
+		margin: 12px 0;
+	}
 }
 
 .delivery {
@@ -665,7 +668,11 @@ input, textarea {
 
 input {
 	@media @mobile {
-		width: 65%;
+		width: 75%;
+	}
+	+ button.btn {
+		margin-left: -4px;
+		width: 25%;
 	}
 }
 
@@ -679,12 +686,12 @@ input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket 
 	height: 50px;
 }
 
-input.blog-search-input, .widget.signupform input, .widget.profile form fieldset input {
+input.blog-search-input, .widget.signupform input, .widget.profile form fieldset input, input.js-display-control {
 	.border-radius (@radius: 4px 0 0 4px);
 	margin-right: 0;
 }
 
-button.blog-search-submit-button, .widget.signupform button, .widget.profile button {
+button.blog-search-submit-button, .widget.signupform button, .widget.profile button, .widget.ecomproductslist .productlist-display-form .form-group button {
 	.border-radius (@radius: 0 4px 4px 0);
 }
 
@@ -697,7 +704,6 @@ button.blog-search-submit-button, .widget.signupform button, .widget.profile but
 textarea {
 	.border-radius (@radius: 4px);
 	padding-top: 10px;
-	imn-height: 120px;
 }
 
 .widget {
