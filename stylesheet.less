@@ -292,7 +292,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	height: 100%;
 	text-align: center;
 	@media @mobile {
-		padding: 0 20px;
+		padding: 100px 20px;
 	}
 	.spare {
 		@media only screen and (max-height: 450px) {
@@ -358,6 +358,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 .feature-img, .widget.feature {
 	width: 100%;
 	height: 100%;
+	@media @tablet {
+		overflow-y: scroll;
+	}
 }
 
 /* 5. Main */
