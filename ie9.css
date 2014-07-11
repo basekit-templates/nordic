@@ -1,3 +1,7 @@
-div[role="main"] {
-	width: 101.3%;
+#main {
+	width: 101.3%!important;
+}
+
+.widget.feature .feature-bgimg .content {
+	background-color: transparent;
 }
