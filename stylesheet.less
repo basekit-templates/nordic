@@ -409,6 +409,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     position: fixed;
     top: 0;
     right: 0;
+    left: 0
     width: 100%;
     height: 100%;
     overflow: scroll;
@@ -1045,8 +1046,9 @@ hr.line {
 }
 /* Scrollbars */
 
-body {
+body, html {
 	-ms-overflow-style: none;
+	overflow: none;
 }
 
 ::-webkit-scrollbar {
