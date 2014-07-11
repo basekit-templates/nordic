@@ -378,6 +378,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 }
 
 .feature-img, .widget.feature {
+	height: 100%;
 	width: 100%;
 	@media @tablet {
 		overflow-y: scroll;
@@ -387,10 +388,6 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 .feature-img .bk-tpl-hidden + .bk-pt-home .bk-header {
 	background-color: @color-swatch6;
 	position: relative;
-}
-
-.widget.feature {
-	height: 100%;
 }
 
 .feature-img .bk-tpl.hidden {
@@ -415,7 +412,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     width: 100%;
     height: 100%;
     overflow: scroll;
-    background: #fcfeff;
+    background: @color-swatch1;
     .border-radius(0px);
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1046,8 +1043,13 @@ hr.line {
 		}
 	}
 }
+/* Scrollbars */
+
+body {
+	-ms-overflow-style: none;
+}
 
 ::-webkit-scrollbar {
 	width: 0px!important;
 	height: 0px!important;
-}  
+}
