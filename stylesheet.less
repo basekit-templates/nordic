@@ -379,10 +379,22 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 .feature-img, .widget.feature {
 	width: 100%;
-	height: 100%;
 	@media @tablet {
 		overflow-y: scroll;
 	}
+}
+
+.feature-img .bk-tpl-hidden + .bk-pt-home .bk-header {
+	background-color: @color-swatch6;
+	position: relative;
+}
+
+.widget.feature {
+	height: 100%;
+}
+
+.feature-img .bk-tpl.hidden {
+	height: auto!important;
 }
 
 /* 5. Main */
@@ -1034,3 +1046,8 @@ hr.line {
 		}
 	}
 }
+
+::-webkit-scrollbar {
+	width: 0px!important;
+	height: 0px!important;
+}  
