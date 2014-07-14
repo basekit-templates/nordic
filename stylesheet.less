@@ -581,8 +581,18 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 /* 9. Ecommerce */
 
 .widget.ecomproductslist {
+	.ecom-productslist-product a {
+		text-decoration: none;
+	}
 	.productlist-display-form {
 		.form-group {
+			&:first-child {
+				select {
+					@media @tablet {
+						margin-left: 0;
+					}
+				}
+			}
 			input.productlist-search, input.productlist-search + button.btn {
 				height: 45px;
 			}
@@ -593,7 +603,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 			}
 			button {
 				position: relative;
-				top: 1px;
+				vertical-align: top;
 			}
 		}
 	}
@@ -614,13 +624,13 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     select {
     	color: lighten(@font-swatch5-color, 15%);
         font-size: bkscale(@font-swatch7-font-size, 0.85);
-        .border-radius(0px);
+        .border-radius(4px);
         height: 50px;
-        line-height: 25px;
+        line-height: 50px;
         margin-left: 6px;
         -webkit-appearance: menulist;
         border: 1px solid lighten(@color-swatch7, 2%);
-        padding: 4px 35px 4px 12px;
+        padding: 14px 5px 14px 12px;
         @media @tablet {
         	background-position: 98% center;
             width: 100%;
@@ -731,8 +741,26 @@ input.blog-search-input, .widget.signupform input, .widget.profile form fieldset
 	margin-right: 0;
 }
 
+input.js-display-control {
+	background: #fafafa;
+	@media @mobile {
+		.border-radius(4px);
+		width: 100%;
+	}
+}
+
+
 button.blog-search-submit-button, .widget.signupform button, .widget.profile button, .widget.ecomproductslist .productlist-display-form .form-group button {
 	.border-radius (@radius: 0 4px 4px 0);
+}
+
+.widget.ecomproductslist .productlist-display-form .form-group button {
+	@media @mobile {
+		.border-radius(4px);
+		margin-left: 0;
+		margin-top: 15px;
+		width: 50%;
+	}
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
