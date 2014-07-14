@@ -614,13 +614,13 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     select {
     	color: lighten(@font-swatch5-color, 15%);
         font-size: bkscale(@font-swatch7-font-size, 0.85);
-        .border-radius(0);
-        height: 45px;
+        .border-radius(0px);
+        height: 50px;
+        line-height: 25px;
         margin-left: 6px;
-        -webkit-appearance: none;
+        -webkit-appearance: menulist;
         border: 1px solid lighten(@color-swatch7, 2%);
         padding: 4px 35px 4px 12px;
-        background: image('/images/arrow-dropdown.png') 95% center no-repeat, @color-swatch7;
         @media @tablet {
         	background-position: 98% center;
             width: 100%;
@@ -709,7 +709,6 @@ input {
 	}
 	+ button.btn {
 		margin-left: -4px;
-		width: 25%;
 	}
 }
 
