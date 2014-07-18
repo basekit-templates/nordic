@@ -659,6 +659,15 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 		color: @font-swatch5-color;
 		font-size: bkscale(@font-swatch5-font-size, 1.1)
 	}
+	a.checkout-empty-link {
+		color: @font-swatch7-color;
+		font-family: @font-swatch7-font-family;
+		font-weight: @font-swatch7-font-weight;
+		font-size: @font-swatch7-font-size;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 	.checkout-pricepu {
 		color: lighten(@color-swatch5, 20%);
 	}
@@ -730,7 +739,7 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
 	.transition(all, 0.5s, ease);
 }
 
-input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, button {
+input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button {
 	.border-radius(4px);
 	line-height: 25px;
 	height: 50px;
