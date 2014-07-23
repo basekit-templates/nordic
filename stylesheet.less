@@ -129,7 +129,6 @@ body {
     	margin: 0;
     }
 	@media only screen and (max-height: 450px) {
-		position: absolute;
 		height: auto;
 	}
     /*&:after {
@@ -716,6 +715,7 @@ input, textarea {
 	background-color: @color-swatch7;
 	border: 1px solid darken(@color-swatch7, 2%);
 	text-indent: 8px;
+	-webkit-appearance: none;
 	&:hover, &:focus {
 		border: 1px solid darken(@color-swatch7, 10%)!important;
 		transition: ease .5s border!important;
@@ -737,6 +737,11 @@ input {
 
 button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover {
 	.transition(all, 0.5s, ease);
+	text-decoration: none;
+}
+
+.widget.ecombasket .ecombasket-pull, .widget.ecomcheckout .checkout-order-button {
+	margin: 15px 0;
 }
 
 input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button {
