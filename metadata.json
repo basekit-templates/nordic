@@ -125,14 +125,14 @@
             "font-size": "60px",
             "font-weight": "400",
             "line-height": "64px",
-            "color": "@color-swatch4",
+            "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
         "font9": {
             "font-family": "\"Droid Sans\", Helvetica, Arial, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
-            "line-height": "34px",
+            "line-height": "24px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
