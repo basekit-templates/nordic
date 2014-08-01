@@ -4,7 +4,7 @@
 2. Mixins
 3. Header & Navigation
 4. Feature
-5. 
+5. Main
 6. Footer
 7. Blog
 8. Menu
@@ -582,6 +582,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 					}
 				}
 			}
+			label {
+				display: block;
+			}
 			input.productlist-search, input.productlist-search + button.btn {
 				height: 45px;
 			}
@@ -623,6 +626,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
         @media @tablet {
         	background-position: 98% center;
             width: 100%;
+        }
+        @media @mobile {
+        	margin-left: 0;
         }
     }
 }
@@ -677,14 +683,24 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	    font-size: bkscale(@font-swatch7-font-size, 0.85);
 	    .border-radius(0px);
 	    height: 45px;
-	    -webkit-appearance: none;
 	    border: 2px solid lighten(@color-swatch7, 2%);
 	    padding: 4px 35px 4px 12px;
 	}
 }
 
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
+	color: lighten(@font-swatch5-color, 15%);
+    font-size: bkscale(@font-swatch7-font-size, 0.85);
+    .border-radius(0px);
+    height: 45px;
+    -webkit-appearance: none;
+    border: 2px solid lighten(@color-swatch7, 2%);
+    padding: 4px 35px 4px 12px;
+}
+
 .ecom-productslist-title, .ecom-featuredproducts-title, .ecom-product-title {
 	font-size: @font-swatch2-font-size;
+	margin-top: 10px;
 }
 
 .widget {
@@ -725,16 +741,22 @@ input {
 	margin: 10px 0;
 }
 
+.ecombasketsummary a {
+	display: inline-block;
+	text-decoration: none;
+}
+
 button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hover, .widget.blogsearch button:hover, .widget.ecomproduct .ecom-product .btn:hover, .widget.ecombasket .ecombasket-pull:hover {
 	.transition(all, 0.5s, ease);
 	text-decoration: none;
 }
 
-.widget.ecombasket .ecombasket-pull, .widget.ecomcheckout .checkout-order-button {
+.widget.ecombasket .ecombasket-pull, .widget.ecomcheckout .checkout-order-button, .ecombasketsummary a {
 	margin: 15px 0;
+	padding: 12px 10px;
 }
 
-input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button {
+input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, .ecombasketsummary a, button {
 	.border-radius(4px);
 	line-height: 25px;
 	height: 50px;
@@ -745,26 +767,30 @@ input.blog-search-input, .widget.signupform input, .widget.profile form fieldset
 	margin-right: 0;
 }
 
-input.js-display-control {
-	background: #fafafa;
-	@media @mobile {
-		.border-radius(4px);
-		width: 100%;
+.productlist-search {
+	input {
+		background: #fafafa;
+		@media @mobile {
+			.border-radius(4px);
+			display: inline-block;
+			margin-right: 1%;
+			width: 74%;
+		}
+	}
+	button {
+		@media @mobile {
+			.border-radius(4px);
+			display: inline-block;
+			margin-left: -4px;
+			width: 25%;
+			vertical-align: top;
+		}
 	}
 }
 
 
 button.blog-search-submit-button, .widget.signupform button, .widget.profile button, .widget.ecomproductslist .productlist-display-form .form-group button {
 	.border-radius (@radius: 0 4px 4px 0);
-}
-
-.widget.ecomproductslist .productlist-display-form .form-group button {
-	@media @mobile {
-		.border-radius(4px);
-		margin-left: 0;
-		margin-top: 15px;
-		width: 50%;
-	}
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
@@ -879,15 +905,32 @@ hr.line {
 	background-color: lighten(@color-swatch5, 75%)
 }
 
-.widget.gallery ul li span.inner .title {
-	bottom: -50px;
-	opacity: 0;
+.widget.gallery ul li span.inner {
+	.title {
+		color: @color-swatch1;
+		font-weight: @font-swatch3-font-weight;
+		font-size: bkscale(@font-swatch4-font-size, 1.1);
+	}
+	.description {
+		color: @color-swatch1;
+	}
 }
 
-.widget.gallery ul li span.inner a:hover .title {
+.widget.gallery .inner .image-data {
+	background: fade(@color-swatch4, 65%);
+	display: block;
+	opacity: 0;
+	height: auto;
 	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.widget.gallery .inner:hover .image-data {
+	.transition( opacity, 0.5s, ease );
 	opacity: 1;
 }
+
 
 .widget {
 	&.responsiveslideshow {
