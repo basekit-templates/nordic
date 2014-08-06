@@ -94,6 +94,7 @@ body {
 		}
 	}
 	&.companyname {
+		word-break: break-word;
 		@media @mobile {
 			max-width: 80%;
 		}
@@ -124,12 +125,13 @@ body {
     z-index: 9999;
     .widget.socialicons {
     	border-left: 1px solid darken(@color-swatch6, 50%);
+    	display: table;
     	padding: 30px 15px;
     	margin: 0;
+    	width: 100%;
     }
 	@media only screen and (max-height: 450px) {
 		position: absolute;
-		height: auto;
 	}
     /*&:after {
     	@media only screen and (max-height: 450px) {
@@ -303,6 +305,8 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 }
 
 .menu-active .bk-nav { 
+	display: table;
+	height: 100%;
 	position: absolute;
 	right: 0; 
 }
@@ -681,8 +685,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	select {
 		color: lighten(@font-swatch5-color, 15%);
 	    font-size: bkscale(@font-swatch7-font-size, 0.85);
-	    .border-radius(0px);
-	    height: 45px;
+	    height: 50px;
 	    border: 2px solid lighten(@color-swatch7, 2%);
 	    padding: 4px 35px 4px 12px;
 	}
@@ -691,9 +694,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
 	color: lighten(@font-swatch5-color, 15%);
     font-size: bkscale(@font-swatch7-font-size, 0.85);
-    .border-radius(0px);
-    height: 45px;
-    -webkit-appearance: none;
+    height: 50px;
     border: 2px solid lighten(@color-swatch7, 2%);
     padding: 4px 35px 4px 12px;
 }
@@ -753,12 +754,13 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
 
 .widget.ecombasket .ecombasket-pull, .widget.ecomcheckout .checkout-order-button, .ecombasketsummary a {
 	margin: 15px 0;
-	padding: 12px 10px;
+	padding: 0 10px;
+	line-height: 50px;
 }
 
 input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, .ecombasketsummary a, button {
 	.border-radius(4px);
-	line-height: 25px;
+	line-height: 50px;
 	height: 50px;
 }
 
