@@ -75,18 +75,12 @@ body {
 
 .widget {
 	&.logo, &.companyname {
-		display: block;
-		float: left;
-		white-space: nowrap;
+		display: inline-block;
 	}
 	&.logo {
-		margin-right: 2px;
-		vertical-align: text-bottom;
-		@media @mobile {
-			vertical-align: top;
-		}
+		margin-right: 3px;
+		vertical-align: top;
 		img {
-			vertical-align: top;
 			@media @mobile {
 				max-width: 80%;
 			}
@@ -96,6 +90,7 @@ body {
 		}
 	}
 	&.companyname {
+		white-space: nowrap;
 		@media @mobile {
 			max-width: 80%;
 		}
@@ -103,14 +98,10 @@ body {
 			@media @mobile {
 				font-size: bkscale(@font-swatch10-font-size, 0.96);
 				line-height: bkscale(@font-swatch10-font-size, 0.94);
-				position: relative;
-				top: -4px;
 			}
 			@media only screen and (max-height: 450px) {
 				font-size: bkscale(@font-swatch10-font-size, 0.96);
 				line-height: bkscale(@font-swatch10-font-size, 0.94);
-				position: relative;
-				top: -4px;
 			}
 		}
 	}
