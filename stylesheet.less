@@ -75,7 +75,8 @@ body {
 
 .widget {
 	&.logo, &.companyname {
-		display: inline-block;
+		display: block;
+		float: left;
 	}
 	&.logo {
 		margin-right: 2px;
@@ -94,7 +95,6 @@ body {
 		}
 	}
 	&.companyname {
-		word-break: break-word;
 		@media @mobile {
 			max-width: 80%;
 		}
@@ -125,7 +125,7 @@ body {
     z-index: 9999;
     .widget.socialicons {
     	border-left: 1px solid darken(@color-swatch6, 50%);
-    	display: table;
+    	float: left;
     	padding: 30px 15px;
     	margin: 0;
     	width: 100%;
@@ -153,7 +153,7 @@ body {
 
 .widget.extendednavigation {
 	background: @color-swatch6;
-	display: table;
+	float: left;
 	padding: 30px 15px;
 	width: 100%;
     ul {
@@ -742,6 +742,10 @@ input {
 	margin: 10px 0;
 }
 
+.widget.paypalbuynow .widget.button.paypal {
+	padding: 0 10px 0 40px;
+}
+
 .ecombasketsummary a {
 	display: inline-block;
 	text-decoration: none;
@@ -832,7 +836,7 @@ textarea {
             button {
                 position: relative;
                 left: -4px;
-                top: 2px;
+                vertical-align: top;
             }
             fieldset input {
                 border: 1px solid darken(@color-swatch7, 2%);
@@ -846,7 +850,7 @@ textarea {
         button {
             width: 85px;
             position: relative;
-            top: 1px;
+            vertical-align: top;
         }
         input {
             border: 1px solid darken(@color-swatch7, 2%);
