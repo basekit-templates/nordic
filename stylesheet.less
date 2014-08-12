@@ -475,6 +475,19 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     }
 }
 
+.blog-post-sharing {
+    margin-top: 20px;
+    .btn.facebook {
+        background-color: #3B5998;
+    }
+    .btn.twitter {
+        background-color: #00ACED;
+    }
+    .btn.googleplus {
+        background-color: #dd4b39;
+    }
+}
+
 /* 8. Menu */
 
 .widget {
@@ -580,11 +593,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	}
 	.productlist-display-form {
 		.form-group {
-			&:first-child {
-				select {
-					@media @tablet {
-						margin-left: 0;
-					}
+			select {
+				@media @tablet {
+					margin-left: 0;
 				}
 			}
 			label {
@@ -716,6 +727,191 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	padding-top: 15px;
 }
 
+// Basket Summary
+// -----------------------------
+
+.widget.ecombasketsummary {
+	margin-bottom: 30px;
+	// Image Wrap
+	.image-wrap {
+		background-position: -10000%;
+		@media (max-width: 650px) {
+			max-width: 100%;
+		}
+		img {
+			max-width: 95%!important;
+			@media (max-width: 650px) {
+				max-width: 100%;
+			}
+		}
+	}
+	// Product Name, Price, Quantity
+	.basket-summary-quantitybtn,
+	.basket-summary-amount {
+		font-family: @font-swatch4-font-family;
+		font-size: @font-swatch4-font-size;
+		font-weight: @font-swatch4-font-weight;
+		line-height: @font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
+		color: @font-swatch4-color;
+	}
+	.basket-summary-productname {
+		font-size: bkscale(@font-swatch4-font-size, 1.1);
+		line-height: bkscale(@font-swatch4-line-height, 1.2);
+	}
+	.basket-summary-pricepu {
+		color: lighten(@color-swatch5, 20%);
+	}
+	// Product Name
+	.basket-summary-productname {
+		display: block;
+		line-height: 24px;
+		color: @color-swatch4;
+		padding-left: 0;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	// Quantity
+	.basket-summary-quantity {
+		margin-top: 8px;
+		.basket-summary-quantity-text {
+			display: block;
+			padding: 0;
+			font-family: @font-swatch4-font-family;
+			color: @font-swatch4-color;
+			font-size: 14px;
+			line-height: 20px;
+		}
+		.quantity-number {
+			position: relative;
+			top: -1px;
+			background-color: darken(@color-swatch1,3%);
+			padding: 1px 10px;
+			font-size: 14px;
+		}
+		button {
+			width: 22px;
+			height: 22px;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			box-shadow: none;
+			background-color: @color-swatch3;
+			font-size: 13px;
+			font-family: @font-swatch4-font-family;
+			color: @color-swatch1;
+			&:hover {
+				background-color: lighten(@color-swatch3,15%);
+				cursor: pointer;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}	
+	// Table
+	table {
+		margin: 20px 0 30px;
+		border-spacing: 0;
+		border-bottom: 0;
+		width: 100%;
+		// Heading Row
+		tr:first-child {
+			font-family: @font-swatch4-font-family;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			color: @font-swatch4-color;
+			@media @mobile {
+				font-size: 12px;
+			}
+			th {
+				border-bottom: 1px solid @color-swatch7;
+				padding-bottom: 15px;
+				position: relative;
+				text-align: left;
+				&:last-child {
+					@media (max-width: 650px) {
+						display: none;
+					}
+				}
+			}
+		}
+		.basket-summary-items:last-child {
+			padding-bottom: 40px;
+		}
+		tr:last-child {
+			td {
+				border-top: 1px solid @color-swatch7;
+				&:nth-child(1), &:nth-child(2) {
+					display: none;
+				}
+			}
+		}
+		// Item Row
+		tr td {
+			@media (max-width: 650px) {
+				display: table;
+				width: 100%;
+				border-bottom: 0;
+			}
+			&:nth-child(1),
+			&:nth-child(2) {
+				padding: 30px 20px 30px 0;
+				vertical-align: top;
+			}
+			&:nth-child(2) {
+				@media (max-width: 650px) {
+					padding-left: 0;
+					padding-bottom: 20px;
+				}
+			}
+			&:nth-child(3) {
+				padding: 20px 20px 20px 0;
+			}
+			// Responsive
+			&:nth-child(1) {
+				width: 25%;
+				@media (max-width: 650px) {
+					padding-bottom: 0;
+					width: 100%;
+				}
+			}
+			&:last-child {
+				@media (max-width: 650px) {
+					padding: 6px 20px 6px 0;
+					margin: 0 0 15px;
+				}
+			}
+		}
+		tr:last-child td:last-child {
+			@media (max-width: 650px) {
+				border-top: 0;
+				margin-top: 0;
+				padding-top: 0;
+			}
+		}
+	}
+	// Continue to Payment Button
+	.basket-summary-submit {
+		margin-bottom: 30px;
+		&:hover {
+			background-color: @font-swatch7-background-color-hover;
+		}
+	}
+	// 
+	.js-shipping-opts {
+		padding-bottom: 20px;
+		font-size: 14px;
+		line-height: 26px;
+		margin-bottom: 20px;
+		label {
+			margin-bottom: 10px;
+		}
+	}
+}
+
 
 /* 10. Forms */
 
@@ -757,13 +953,13 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
 	text-decoration: none;
 }
 
-.widget.ecombasket .ecombasket-pull, .widget.ecomcheckout .checkout-order-button, .ecombasketsummary a {
+.widget.ecombasket .ecombasket-pull, .widget.ecomcheckout .checkout-order-button {
 	margin: 15px 0;
 	padding: 0 10px;
 	line-height: 50px;
 }
 
-input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, .ecombasketsummary a, button {
+input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.ecombasket .ecombasket-pull p, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button {
 	.border-radius(4px);
 	line-height: 50px;
 	height: 50px;
@@ -780,7 +976,7 @@ input.blog-search-input, .widget.signupform input, .widget.profile form fieldset
 		@media @mobile {
 			.border-radius(4px);
 			display: inline-block;
-			margin-right: 1%;
+			margin-right: 0;
 			width: 74%;
 		}
 	}
@@ -882,11 +1078,11 @@ textarea {
             font-weight: @font-swatch7-font-weight;
             color: @font-swatch7-color;
             letter-spacing: inherit;
-            padding: 5px 10px;
-            margin: 1em 0;
+            padding: 0 10px;
             text-decoration: none;
             position: relative;
             width: 85px;
+            vertical-align: top;
             &:hover {
             	background-color: @font-swatch7-background-color-hover;
             }
@@ -938,10 +1134,73 @@ hr.line {
 	opacity: 1;
 }
 
+// Twitter Feed
+.widget.twitter {
+	margin: 20px 0;
+	img {
+		border-radius: 50%;
+	}
+	p {
+		color: @color-swatch4;
+		padding: 0;
+	}	
+	li {
+		border-bottom: darken(@color-swatch1,10%);
+	}
+	ul li a:hover {
+		text-decoration: none;
+	}
+	li:last-child {
+		padding-bottom: 0;
+	}
+	// Tweet Content
+	.twitter-profile-pic {
+		@media @tablet {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	.twitter-content {
+		float: left;
+		margin-top: 5px;
+		.bk-full-name,
+		a, p a, span, a .bk-full-name {
+			color: @font-swatch4-color;
+			font-family: @font-swatch4-font-family;
+			font-size: @font-swatch4-font-size;
+			line-height: @font-swatch4-line-height;
+			letter-spacing: @font-swatch4-letter-spacing;
+		}
+		// Tweet Link
+		p a, a:hover span.bk-full-name {
+			color: lighten(@color-swatch5, 5%);
+			text-decoration: none;
+		}
+		p a:hover {
+			color: @color-swatch3;
+		}
+		span a {
+			text-decoration: none;
+			&:hover {
+				color: @color-swatch3;
+				text-decoration: none;
+			}
+		}
+		// Extra Info
+		time {
+			display: none;
+		}
+		span {
+			font-weight: inherit;
+		}
+		span, span a {
+			font-size: 13px;
+		}
+	}
+}
 
 .widget {
 	&.responsiveslideshow {
-		background-color: gainsboro;
 		margin-top: 20px;
 		.slideshow-widget-wrapper {
 		}
@@ -956,7 +1215,7 @@ hr.line {
 		}
 		.content-wrapper {
 			background-color: fade(@color-swatch1, 75%);
-			bottom: 15px;
+			top: initial;
 			display: inline-block;
 			min-height: 50px;
 			height: auto;
@@ -964,11 +1223,10 @@ hr.line {
 			left: 15px;
 			right: auto;
 			max-width: 80%;
+			bottom: 15px;
 			@media @mobile {
 				display: block;
-				bottom: initial;
 				height: initial;
-				top: 0;
 			}
 			span {
 				color: @color-swatch5;
@@ -1011,13 +1269,13 @@ hr.line {
 			}
 			.btn-prev, .btn-next {
 				background-color: fade(@color-swatch1, 65%);
-				bottom: 15px;
+				top: 15px;
 				font-family: @font-swatch7-font-family;
 				font-size: bkscale(@font-swatch3-font-size, 1.4);
 				font-weight: @font-swatch5-font-weight;
 				height: 50px;
 				width: 55px;
-				top: inherit;
+				bottom: inherit;
 				text-indent: 1000px;
 				overflow: hidden;
 				.transition(all .5s ease);
