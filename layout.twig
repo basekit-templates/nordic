@@ -34,9 +34,6 @@
 	{% block content %}
 	{% endblock %}
 	{% include basekit.bodyScript %}
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
 <script type="text/javascript">
 	! function () {
 	    function supportsSVG() {
@@ -53,7 +50,7 @@
     if ( typeof $menu_trigger !== 'undefined' ) {
       $menu_trigger.addEventListener('click', function() {
         $body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
-        $(this).addClass('menu-active').removeClass('menu-active');
+        bk$(this).addClass('menu-active').removeClass('menu-active');
      });
     }
   }).call(this);
