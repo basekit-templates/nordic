@@ -672,6 +672,10 @@ article.blog-post-item {
 	}
 }
 
+.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
+	background-image: none !important;
+}
+
 .widget.ecomcheckout {
 	table {
 		margin-bottom: 40px;
@@ -925,6 +929,13 @@ article.blog-post-item {
 	}
 }
 
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
+	border-radius: 0;
+	height: auto;
+	line-height: normal;
+	background: none;
+	border: none;
+}
 
 /* 10. Forms */
 
@@ -972,10 +983,15 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
 	line-height: 50px;
 }
 
-input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.ecombasket .ecombasket-pull p, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button {
+input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.ecombasket .ecombasket-pull p, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button, .ecom-product-go-to-checkout-btn, .ecombasket-summary-link {
 	.border-radius(4px);
 	line-height: 50px;
 	height: 50px;
+	text-decoration: none;
+}
+
+a.ecombasket-summary-link {
+	text-decoration: none;
 }
 
 input.blog-search-input, .widget.signupform input, .widget.profile form fieldset input, input.js-display-control {
