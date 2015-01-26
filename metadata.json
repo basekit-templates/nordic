@@ -104,7 +104,7 @@
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "26px",
-            "color": "fade(@color-swatch1, 65%)",
+            "color": "lighten(@color-swatch5, 32%)",
             "color-hover": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "transparent",
