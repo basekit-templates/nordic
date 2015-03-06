@@ -1,4 +1,4 @@
-/* 
+/*
 
 1. Imports & Includes
 2. Mixins
@@ -29,10 +29,10 @@
 }
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
-	-webkit-transition: @prop @time @ease;  
+	-webkit-transition: @prop @time @ease;
 	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease; 
-	-o-transition:      @prop @time @ease;  
+	-ms-transition:     @prop @time @ease;
+	-o-transition:      @prop @time @ease;
 }
 
 /* 3. Header & Navigation */
@@ -183,7 +183,7 @@ body {
 	            text-transform: none;
 	            line-height: 1em;
         	}
-            &:hover { 
+            &:hover {
             	.transition( all, 0.5s, ease);
             	ul {
             		/*background: darken(@color-swatch6, 3%);*/
@@ -194,6 +194,7 @@ body {
             		margin-left: 20px;
             		margin-top: 8px;
             		width: 90%;
+                    max-width: 250px;
             		li {
             			padding: 12px 6px;
             			&:first-child {
@@ -224,6 +225,7 @@ body {
             	}
             	.text {
             		color: @font-swatch6-color;
+                    min-width: 100%;
             	}
 	        }
 	        a {
@@ -242,7 +244,7 @@ body {
 		padding: 11px 9px 0;
 		position: absolute;
 		right: 345px;
-		top: 30px; 
+		top: 30px;
 		display: inline-block;
 		width: 42px;
 		height: 38px;
@@ -281,7 +283,7 @@ body {
 div.widget .extendednavigation ul, div.widget.extendednavigation ul {
 	display: block;
 	li {
-		display: block; 
+		display: block;
 	}
 }
 
@@ -289,12 +291,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-.menu-active .widget.extendednavigation#slide-menu { 
-	right: 0px; 
+.menu-active .widget.extendednavigation#slide-menu {
+	right: 0px;
 }
 
-.menu-active #main, .menu-active .bk-header { 
-	right: 320px; 
+.menu-active #main, .menu-active .bk-header {
+	right: 320px;
 	.transition( all, 0.5s, ease);
     -webkit-backface-visibility: hidden;
     @media @mobile {
@@ -307,11 +309,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	-webkit-backface-visibility: hidden;
 }
 
-.menu-active .bk-nav { 
+.menu-active .bk-nav {
 	display: table;
 	height: 100%;
 	position: absolute;
-	right: 0; 
+	right: 0;
 	.transition( all, 0.5s, ease);
 }
 
@@ -583,7 +585,7 @@ article.blog-post-item {
             }
         }
         .menu-section-item-dietary-props .dietary-icon {
-            
+
         }
     }
     .menu-subsection-name {
@@ -641,7 +643,7 @@ article.blog-post-item {
 	}
 }
 
-.productlist-display-form, .productlist-item-count { 
+.productlist-display-form, .productlist-item-count {
     select {
     	color: lighten(@font-swatch5-color, 15%);
         font-size: bkscale(@font-swatch7-font-size, 0.85);
@@ -826,7 +828,7 @@ article.blog-post-item {
 				outline: none;
 			}
 		}
-	}	
+	}
 	// Table
 	table {
 		margin: 20px 0 30px;
@@ -917,7 +919,7 @@ article.blog-post-item {
 			background-color: @font-swatch7-background-color-hover;
 		}
 	}
-	// 
+	//
 	.js-shipping-opts {
 		padding-bottom: 20px;
 		font-size: 14px;
@@ -1171,7 +1173,7 @@ hr.line {
 	p {
 		color: @color-swatch4;
 		padding: 0;
-	}	
+	}
 	li {
 		border-bottom: darken(@color-swatch1,10%);
 	}
@@ -1258,7 +1260,7 @@ hr.line {
 			}
 			span {
 				color: @color-swatch5;
-				padding: 20px 4px 0 10px; 
+				padding: 20px 4px 0 10px;
 				@media @mobile {
 					padding-right: 10px;
 				}
