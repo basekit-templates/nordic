@@ -947,7 +947,10 @@ article.blog-post-item {
 
 /* 10. Forms */
 
-input, textarea {
+input[type=email],
+input[type=text],
+input[type=search],
+textarea {
 	background-color: @color-swatch7;
 	border: 1px solid darken(@color-swatch7, 2%);
 	text-indent: 8px;
@@ -958,7 +961,9 @@ input, textarea {
 	}
 }
 
-input {
+input[type=email],
+input[type=text],
+input[type=search] {
 	@media @mobile {
 		width: 75%;
 	}
@@ -991,7 +996,7 @@ button:hover, button.btn:hover, .widget.tweet a:hover, .widget.button.paypal:hov
 	line-height: 50px;
 }
 
-input, .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.ecombasket .ecombasket-pull p, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button, .ecom-product-go-to-checkout-btn, .ecombasket-summary-link {
+input[type=email], input[type=text], input[type=search], .widget.profile form fieldset input, .widget.tweet a, .widget.ecombasket .ecombasket-pull, .widget.ecombasket .ecombasket-pull p, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button, .ecom-product-go-to-checkout-btn, .ecombasket-summary-link {
 	.border-radius(4px);
 	line-height: 50px;
 	height: 50px;
