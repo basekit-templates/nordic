@@ -1,7 +1,7 @@
 {
     "name":"Nordic",
     "thumbnail":"nordic.png",
-    "screenshot":"nordic.png",
+    "screenshot":"nordic-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
