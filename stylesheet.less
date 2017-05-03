@@ -20,6 +20,16 @@
 @tablet: ~"only screen and (max-width: 860px)";
 @mobile: ~"only screen and (max-width: 650px)";
 
+html,
+body,
+.wrap,
+.bk-pt-home,
+[data-role="main"] {
+    @media @tablet {
+        height: 100%;
+    }
+}
+
 /* 2. Mixins */
 
 .border-radius (@radius: 6px) {
