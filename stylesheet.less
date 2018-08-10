@@ -330,6 +330,10 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	visibility: hidden;
 	transition: all 0.5s ease;
 	z-index: 99999;
+
+	@media @mobile {
+		width: 250px;
+	}
 }
 
 .menu-active + .gdpr-footer {
@@ -340,6 +344,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 .gdpr-footer__link {
 	padding: 8px 15px;
+	word-break: break-word;
 }
 
 #main, .bk-header, .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
