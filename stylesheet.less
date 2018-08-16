@@ -136,6 +136,7 @@ body {
 .bk-nav {
 	background: @color-swatch6;
 	height: 100%;
+	padding-bottom: 100px;
 	position: fixed;
 	right: -320px;
 	width: 320px;
@@ -317,6 +318,33 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     @media @mobile {
     	right: 250px;
     }
+}
+
+.gdpr-footer {
+	background-color: darken(@color-swatch6, 5%);
+	bottom: 0;
+	position: fixed;
+	right: -320px;
+	opacity: 0;
+	width: 320px;
+	visibility: hidden;
+	transition: all 0.5s ease;
+	z-index: 99999;
+
+	@media @mobile {
+		width: 250px;
+	}
+}
+
+.menu-active + .gdpr-footer {
+	opacity: 1;
+	right: 0;
+	visibility: visible;
+}
+
+.gdpr-footer__link {
+	padding: 8px 15px;
+	word-break: break-word;
 }
 
 #main, .bk-header, .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
