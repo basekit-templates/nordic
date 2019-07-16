@@ -1,5 +1,6 @@
 {
     "name":"Nordic",
+    "versionTenCompatible": 1,
     "thumbnail":"nordic.png",
     "screenshot":"nordic-screenshot.jpg",
     "templateType":"standard",

@@ -1,0 +1,37 @@
+// Re-adds the container width to any widgets inside the main zone
+.empty-zone,
+#page-zones__main:empty,
+.canvas,
+#page-zones__main > .widget:not(.row),
+.row:not(.widget):not(.row--width-no-padding) .row__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    width: 90%;
+}
+
+// Moves spacing to the first widget in the main zone
+.edit #page-zones__main-overlay + .widget:not(.row),
+#page-zones__main > .widget:not(.row):first-child {
+    margin-top: 20px;
+}
+
+// Moves spacing to the last widget in the main zone
+#page-zones__main > .widget:not(.row):last-child {
+    margin-bottom: 20px;
+}
+
+// Add spacing to the top of a widget when it procedes a section
+#page-zones__main > .row + .widget:not(.row) {
+    margin-top: 15px;
+}
+
+// Adds spacing to the top and bottom of a section when a widget precedes it
+#page-zones__main > .widget:not(.row) + .row {
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    &:not(:last-child) {
+         margin-bottom: 0;
+    }
+}
