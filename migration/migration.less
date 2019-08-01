@@ -1,37 +1,95 @@
-// Re-adds the container width to any widgets inside the main zone
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+  
+// Main content spacing (replace with corresponding template class)
+.contain {
+  padding: 0;
+}
+
+// Widget overflow to allow 10S overlays to display correctly
+.widget.content {
+  overflow: inherit;
+}
+
+
+
+
+// Migration styles
+// -----------------------------
+
+
+// Replace with corresponding template values
+@container-width: 1520px;
+
+@spacing__first--desktop: 40px;
+@spacing__first--mobile:  20px;
+
+@spacing--other: 20px;
+
+
+// Applies spacing to widgets to mimic container width
 .empty-zone,
 #page-zones__main:empty,
-.canvas,
 #page-zones__main > .widget:not(.row),
 .row:not(.widget):not(.row--width-no-padding) .row__container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 960px;
-    width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: @container-width;
+  width: 90%;
 }
 
-// Moves spacing to the first widget in the main zone
-.edit #page-zones__main-overlay + .widget:not(.row),
+
+// Move spacing to first widget in the main zone (not sections)
+&.edit #page-zones__main-overlay + .widget:not(.row),
 #page-zones__main > .widget:not(.row):first-child {
-    margin-top: 20px;
+  margin-top: @spacing__first--desktop;
+
+  @media @mobile {
+    margin-top: @spacing__first--mobile;
+  }
 }
 
-// Moves spacing to the last widget in the main zone
+
+// Move spacing to last widget in the main zone (not sections)
 #page-zones__main > .widget:not(.row):last-child {
-    margin-bottom: 20px;
+  margin-bottom: @spacing__first--desktop;
+
+  @media @mobile {
+    margin-bottom: @spacing__first--mobile;
+  }
 }
 
-// Add spacing to the top of a widget when it procedes a section
+
+// Add spacing to the top of a widget when it follows a section
 #page-zones__main > .row + .widget:not(.row) {
-    margin-top: 15px;
+  margin-top: @spacing--other;
 }
 
-// Adds spacing to the top and bottom of a section when a widget precedes it
+
+// Remove spacing if widget follows a light section (change to dark if template has a dark BG)
+#page-zones__main > .row.style--light + .widget:not(.row) {
+  margin-top: 0;
+}
+
+
+// Adds spacing to the section when a widget is before it
 #page-zones__main > .widget:not(.row) + .row {
-    margin-bottom: 15px;
-    margin-top: 15px;
+  margin-bottom: @spacing--other;
+  margin-top: @spacing--other;
 
-    &:not(:last-child) {
-         margin-bottom: 0;
-    }
+  &:not(:last-child) {
+       margin-bottom: 0;
+  }
 }
+
+
+} // End of #migrated-site
