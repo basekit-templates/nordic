@@ -20,6 +20,29 @@
   overflow: inherit;
 }
 
+&.edit {
+    .widget.extendednavigation a.pull {
+        right: 445px;
+    }
+    .menu-active {
+        .bk-nav {
+            right: 100px;
+        }
+        #main {
+            width: ~"calc(100% - 520px)";
+        }
+        .widget.extendednavigation a.pull {
+            right : 345px;
+        }
+    }
+}
+
+&.edit #main {
+    width: ~"calc(100% - 200px)";
+    margin: 0 auto;
+    left: 0;
+}
+
 
 
 
