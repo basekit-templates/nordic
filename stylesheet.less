@@ -88,12 +88,15 @@ body {
 }
 
 .bk-header {
+    .align-items(center);
 	background: lighten(@color-swatch6, 5%);
-	padding: 30px;
+    .flex-display;
+    .flex-wrap(wrap);
+	padding: 30px 100px 30px 30px;
 	width: 100%;
     min-height: 98px;
 	@media @mobile {
-		padding: 25px 30px 15px;
+		padding: 25px 75px 15px 30px;
 	}
 }
 
@@ -102,7 +105,7 @@ body {
 		display: inline-block;
 	}
 	&.logo {
-		margin-right: 3px;
+		margin-right: 6px;
 		vertical-align: top;
 		img {
 			@media @mobile {

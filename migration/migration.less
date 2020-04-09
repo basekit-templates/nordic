@@ -7,31 +7,67 @@
   @editor-desktop-breakpoint: 930px;
 
   &.edit {
+
+
+    &.row-editing,
+    &.is-move-mode {
+      a.pull {
+        display: none;
+      }
+    }
+    
+
+    [data-widget-type="feature"] {
+      z-index: 1;
+    }
+
+    .bk-header {
+      z-index: 2;
+    }
+
     .bk-nav {
       background: transparent;
+      z-index: 3;
+    }
+
+    [data-widget-type="extendednavigation"] .widget-overlay {
+      height: 40px;
+      left: initial;
+      right: 340px;
+      top: 28px;
+      width: 50px;
 
       @media only screen and (min-width: @editor-desktop-breakpoint) {
-        height: 0;
-        right: -220px;
+        right: 445px;
+        top: 30px;
       }
 
-      .extendednavigation {
-        background: transparent;
+      @media @mobile {
+        right: 272px;
+        top: 18px;
       }
 
-      .js-menu-list,
-      .socialicons {
-        display: none !important;
+      .widget__item--visibility {
+        right: -15px;
+        top: -15px;
+      }
+    }
+
+    .extendednavigation a.pull {
+      right: 345px;
+
+      @media only screen and (min-width: @editor-desktop-breakpoint) {
+        right: 450px;
+      }
+
+      @media @mobile {
+        right: 275px;
       }
     }
 
     #main {
       position: relative;
       overflow: visible;
-    }
-
-    .widget.feature {
-      height: 100vh;
     }
 
     .row-template-preview__template-add-button {
@@ -44,6 +80,10 @@
     width: 100%;
     max-width: 100%;
     padding: 0;
+  }
+
+  .widget.signupform fieldset button {
+    width: auto;
   }
 
 
@@ -61,13 +101,13 @@
   .empty-zone,
   #page-zones__main:empty,
   #page-zones__main > .widget:not(.row) {
-    margin-left: @spacing__first--mobile;
-    margin-right: @spacing__first--mobile;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1520px;
+    width: ~"calc(100% - 40px)";
 
     @media only screen and (min-width: 481px) {
-      margin-left: @spacing__first--desktop;
-      margin-right: @spacing__first--desktop;
+      width: ~"calc(100% - 80px)";
     }
   }
 
@@ -82,24 +122,6 @@
     @media only screen and (min-width: 481px) {
       padding-left: @spacing__first--desktop;
       padding-right: @spacing__first--desktop;
-    }
-  }
-
-  &:not(.edit) .empty-zone,
-  &:not(.edit) #page-zones__main:empty,
-  &:not(.edit) #page-zones__main > .widget:not(.row) {
-    @media only screen and (min-width: 1601px) {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  &.edit .empty-zone,
-  &.edit #page-zones__main:empty,
-  &.edit #page-zones__main > .widget:not(.row) {
-    @media only screen and (min-width: 1801px) {
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 
@@ -141,15 +163,7 @@
   #page-zones__main > .widget:not(.row) + .row {
     margin-bottom: 0;
     margin-top: @spacing--other;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
   }
-
 }
 
-.edit .widget.extendednavigation a.pull {
-  pointer-events: none;
-}
 // End of #migrated-site
