@@ -40,5 +40,22 @@
             });
         </script>
 
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                const scrollOut = ScrollOut({
+                    once: true,
+                    scrollingElement: "#main",
+                    targets: ".widget--animation",
+                    threshold: 0,
+                    cssProps: {
+                        visible: true,
+                    }
+                });
+                window.setTimeout(function() {
+                    scrollOut.index();
+                    scrollOut.update();
+                });
+            });
+        </script>
     </body>
 </html>
